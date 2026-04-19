@@ -1,0 +1,35 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #ffffff;
+  --color-surface: #f5f5f4;
+  --color-surface-hover: #ebebea;
+  --color-text: #1a1a1a;
+  --color-muted: #888780;
+  --color-border: rgba(0, 0, 0, 0.12);
+}
+
+[data-theme="dark"] {
+  --color-bg: #131314;
+  --color-surface: #1e1e20;
+  --color-surface-hover: #28282b;
+  --color-text: #f0ede8;
+  --color-muted: #888780;
+  --color-border: rgba(255, 255, 255, 0.09);
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+  transition: background 0.2s, color 0.2s;
+}
